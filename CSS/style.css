@@ -3,7 +3,71 @@
   --color-grey-light-2: #f7f7f7;
   --color-grey-light-3: #e7e7e8;
   --color-dark-grey: #536471;
-  --color-black: #0f1419;
-  --color-button_blue_1: #8ecdf7;
-  --color-button_blue_2: #1d9bf0;
-  --color-button_blue_3: #1a8cd8; }
+  --color-black-1: #272c30;
+  --color-black-2: #0f1419;
+  --color-button-blue-1: #8ecdf7;
+  --color-button-blue-2: #1d9bf0;
+  --color-button-blue-3: #1a8cd8;
+  --color-text-light-1: #5c6c78;
+  --color-text-dark-1: #140034; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: flex; }
+
+.header {
+  height: 100vh; }
+
+.logo {
+  height: 2.2rem; }
+
+.content {
+  background-color: lightcyan;
+  flex: 0 0 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.side-nav {
+  font-size: 2.2rem;
+  list-style: none; }
+  .side-nav__link:link {
+    text-decoration: none;
+    display: block; }
+  .side-nav__icon {
+    width: 3.2rem;
+    height: 3.2rem; }
+
+.nav-btn {
+  display: inline-block; }
+
+.main_view {
+  display: flex; }
+
+.tweet {
+  background-color: var(--color-grey-light-3);
+  height: 100vh;
+  flex: 0 0 56rem; }
+
+.more_info {
+  background-color: var(--color-grey-light-2);
+  flex: 0 0 35rem; }
