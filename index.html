@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,300&display=swap"
       rel="stylesheet"
     />
 
@@ -19,99 +19,104 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <title>Home &zwnj; &frasl; &zwnj; Twitter</title>
   </head>
-  <!-- <svg class="user-nav__icon">
-    <use xLink:href="icons/sprite.svg#poll_black_48dp"></use>
-  </svg> -->
 
   <body>
     <div class="container">
-      <div class="content">
-        <header class="header">
-          <img src="img/logo.png" alt="twitter clone" class="logo" />
-          <nav class="sidebar">
-            <ul class="side-nav">
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+      <header class="header">
+        <div class="logo-container">
+          <a href="#" title="Home page"
+            ><img src="img/logo.png" alt="twitter clone" class="logo"
+          /></a>
+        </div>
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center side-nav__link--active">
                   <svg class="side-nav__icon">
-                    <use xLink:href="icons/sprite.svg#home_black_48dp"></use>
+                    <use xLink:href="icons/sprite.svg#icon-home"></use>
                   </svg>
                   <span>Home</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use xLink:href="icons/sprite.svg#tag_black_48dp"></use>
+                    <use xLink:href="icons/sprite.svg#icon-hash"></use>
                   </svg>
                   <span>Explore</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use
-                      xLink:href="icons/sprite.svg#notifications_none_black_48dp"
-                    ></use>
+                    <use xLink:href="icons/sprite.svg#icon-bell"></use>
                   </svg>
                   <span>Notifications</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use
-                      xLink:href="icons/sprite.svg#mail_outline_black_48dp"
-                    ></use>
+                    <use xLink:href="icons/sprite.svg#icon-mail"></use>
                   </svg>
                   <span>Messages</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use
-                      xLink:href="icons/sprite.svg#bookmark_border_black_48dp"
-                    ></use>
+                    <use xLink:href="icons/sprite.svg#icon-bookmark"></use>
                   </svg>
                   <span>Bookmarks</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use
-                      xLink:href="icons/sprite.svg#list_alt_black_48dp"
-                    ></use>
+                    <use xLink:href="icons/sprite.svg#icon-file-text"></use>
                   </svg>
                   <span>List</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
-                    <use
-                      xLink:href="icons/sprite.svg#person_outline_black_48dp"
-                    ></use>
+                    <use xLink:href="icons/sprite.svg#icon-user"></use>
                   </svg>
                   <span>Profile</span>
-                </a>
-              </li>
-              <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
+                </div>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <div class="side-nav__center">
                   <svg class="side-nav__icon">
                     <use
-                      xLink:href="icons/sprite.svg#more_horiz_black_48dp"
+                      xLink:href="icons/sprite.svg#icon-more-horizontal"
                     ></use>
                   </svg>
                   <span>More</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#" class="nav-btn">Tweet</a>
-        </header>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="btn nav-btn">Tweet</a>
+        </nav>
         <div class="account">Algirdas</div>
-      </div>
+      </header>
 
       <main class="main_view">
         <div class="tweet">tweet</div>
