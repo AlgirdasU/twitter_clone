@@ -118,10 +118,64 @@
         <div class="account">Algirdas</div>
       </header>
 
-      <main class="main_view">
-        <div class="tweet">tweet</div>
-        <div class="more_info">more info</div>
-      </main>
+      <!-- Tweet feed start -->
+      <div class="tweet-feed">
+        <form action="#" class="form">
+          <div class="form__home">
+            <h2>Home</h2>
+            <svg class="form__icon">
+              <use xLink:href="icons/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <!-- Input text start -->
+          <div class="form__group">
+            <svg class="form__icon-user">
+              <use xLink:href="icons/sprite.svg#icon-user1"></use>
+            </svg>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="What's happening"
+              id="tweet"
+              required
+            />
+            <label for="tweet" class="form_label">Everyone can reply</label>
+          </div>
+          <!-- Input text end -->
+
+          <!-- Info input start -->
+          <div class="info-group">
+            <div class="info-group__input">
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-video"></use>
+              </svg>
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-camera"></use>
+              </svg>
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-pie-chart"></use>
+              </svg>
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-smile"></use>
+              </svg>
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-calendar"></use>
+              </svg>
+              <svg class="info-group__icon">
+                <use xLink:href="icons/sprite.svg#icon-map-pin"></use>
+              </svg>
+            </div>
+            <a href="#" class="btn tweet-btn">Tweet</a>
+          </div>
+        </form>
+        <!-- Info input end -->
+
+        <div class="show-tweet">Show 3 Tweet</div>
+      </div>
+      <!-- Tweet feed end -->
+
+      <div class="more_info">more info</div>
     </div>
   </body>
 </html>
