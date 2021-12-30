@@ -99,7 +99,7 @@ body {
     color: var(--color-text-dark-1);
     font-weight: 800; }
   .side-nav__link:hover {
-    background-color: var(--color-grey-light-3); }
+    background-color: var --color-grey-light-3; }
   .side-nav__center {
     display: flex;
     align-items: center; }
@@ -122,13 +122,49 @@ body {
 .nav-btn:hover {
   background-color: var(--color-button-blue-3); }
 
-.main_view {
+.container {
   display: flex; }
 
-.tweet {
-  background-color: var(--color-grey-light-3);
+.tweet-feed {
   min-height: 100vh;
   flex: 0 0 60rem; }
+
+.form__home {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem 0 2rem;
+  justify-content: space-between;
+  color: var(--color-text-dark-1); }
+
+.form__home > h2 {
+  font-size: 2.2rem; }
+
+.form__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor; }
+
+.form__group {
+  display: flex;
+  color: var(--color-dark-grey); }
+
+.form__icon-user {
+  width: 3rem;
+  height: 3rem;
+  fill: currentColor; }
+
+.form__input {
+  display: block;
+  font-size: 2.2rem;
+  font-family: inherit;
+  border: none; }
+
+.info-group {
+  color: var(--color-button-blue-2); }
+  .info-group__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor; }
 
 .more_info {
   background-color: var(--color-grey-light-2);
