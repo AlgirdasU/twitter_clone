@@ -125,7 +125,9 @@
           </div>
           <div class="account__name-container">
             <div><span class="account__name">Algirdas</span></div>
-            <span class="account__name-other">@Algirdas</span>
+            <div>
+              <span class="account__name-other">@Algirdas</span>
+            </div>
           </div>
           <div class="account__more-container">
             <svg class="account__icon-more">
@@ -146,30 +148,30 @@
             </svg>
           </div>
 
-          <!-- Input text start -->
           <div class="form__group">
             <div class="form__svg-container">
               <svg class="form__icon-user">
                 <use xLink:href="icons/sprite.svg#icon-user1"></use>
               </svg>
             </div>
-            <input
-              type="text"
-              class="form__input"
-              placeholder="What's happening"
-              id="tweet"
-              required
-            />
-            <div class="form__label-container">
-              <svg class="form__icon-globe">
-                <use xLink:href="icons/sprite.svg#icon-smile"></use>
-              </svg>
-              <label for="tweet" class="form__label">Everyone can reply</label>
+            <div>
+              <input
+                type="text"
+                class="form__input"
+                placeholder="What's happening?"
+                id="tweet"
+                required
+              />
             </div>
           </div>
-          <!-- Input text end -->
+          <div class="form__label-container">
+            <svg class="form__icon-globe">
+              <use xLink:href="icons/sprite.svg#icon-smile"></use>
+            </svg>
+            <span class="form__label">Everyone can reply</span>
+            <!-- <label for="tweet" class="form__label">Everyone can reply</label> -->
+          </div>
 
-          <!-- Info input start -->
           <div class="info-group">
             <div class="info-group__input">
               <svg class="info-group__icon">
@@ -194,7 +196,6 @@
             <a href="#" class="btn tweet-btn">Tweet</a>
           </div>
         </form>
-        <!-- Info input end -->
 
         <div class="show-tweet">Show 3 Tweet</div>
       </div>
