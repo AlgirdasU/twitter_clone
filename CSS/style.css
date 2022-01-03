@@ -47,13 +47,13 @@ body {
 
 .logo {
   width: 3rem;
-  margin: 2rem 3rem 1rem 3rem; }
+  margin: 1.5rem 3rem 1rem 3rem; }
 
 .logo-container {
   position: relative;
   width: 5rem;
   height: 5rem;
-  border-radius: 50%;
+  border-radius: 10rem;
   margin: 0.3rem 0 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -115,20 +115,23 @@ body {
   background-color: var(--color-button-blue-3); }
 
 .account {
-  margin: 0 2rem 2rem 3rem;
+  margin: 0 2rem 1.2rem 2rem;
   display: flex;
   align-items: center;
-  width: 100%; }
+  padding: 0.8rem 1rem;
+  border-radius: 10rem;
+  cursor: pointer; }
+  .account:hover {
+    background-color: var(--color-grey-light-3); }
   .account__icon-container {
     position: relative;
     width: 4.5rem;
     height: 4.5rem;
-    border-radius: 50%;
+    border-radius: 10rem;
     margin-right: 1rem;
     display: flex;
     justify-content: center;
     align-items: end;
-    cursor: pointer;
     background-color: var(--color-grey-light-4);
     color: var(--color-dark-grey); }
   .account__icon-user {
@@ -136,75 +139,117 @@ body {
     height: 3.5rem;
     fill: currentColor; }
   .account__name-container {
-    margin-right: 6rem;
+    margin-right: 4rem;
+    line-height: 1.2;
     font-size: 0; }
+  .account__name-container div:nth-child(1) {
+    font-weight: 700; }
   .account__name {
     font-size: 1.8rem; }
   .account__name-other {
     font-size: 1.8rem; }
   .account__icon-more {
-    width: 3rem;
-    height: 3rem; }
+    width: 2.4rem;
+    height: 2.4rem; }
 
 .container {
   display: flex; }
 
 .tweet-feed {
   min-height: 100vh;
-  flex: 0 0 60rem; }
+  flex: 0 0 60rem;
+  border-left: 1px solid var(--color-grey-light-3);
+  border-right: 1px solid var(--color-grey-light-3); }
 
-.form__home {
-  display: flex;
-  align-items: center;
+.form {
   margin: 0 2rem 0 2rem;
-  justify-content: space-between;
-  color: var(--color-text-dark-1); }
-
-.form__home > h2 {
-  font-size: 2.2rem; }
-
-.form__icon {
-  width: 2rem;
-  height: 2rem;
-  fill: currentColor; }
-
-.form__group {
-  display: flex; }
-
-.form__svg-container {
-  color: var(--color-dark-grey); }
-
-.form__icon-user {
-  width: 3rem;
-  height: 3rem;
-  fill: currentColor; }
-
-.form__input {
-  display: block;
-  font-size: 2.2rem;
-  font-family: inherit;
-  border: none; }
-
-.form__label-container {
-  color: var(--color-button-blue-2); }
-
-.form__icon-globe {
-  width: 2rem;
-  height: 2rem;
-  fill: currentColor; }
-
-.form__label {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.7px; }
+  display: flex;
+  flex-direction: column; }
+  .form__home {
+    display: flex;
+    align-items: center;
+    margin: 1.8rem 0 2.5rem 0;
+    justify-content: space-between;
+    color: var(--color-text-dark-1);
+    line-height: 1px; }
+  .form__home > h2 {
+    font-size: 2.2rem; }
+  .form__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor; }
+  .form__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
+  .form__svg-container {
+    background-color: var(--color-grey-light-4);
+    color: var(--color-dark-grey);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-right: 1rem; }
+  .form__icon-user {
+    width: 4.2rem;
+    height: 4.2rem;
+    fill: currentColor; }
+  .form__input {
+    display: block;
+    font-size: 2.2rem;
+    font-family: inherit;
+    border: none;
+    outline: none; }
+  .form__label-container {
+    color: var(--color-button-blue-2);
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid var(--color-grey-light-3); }
+  .form__icon-globe {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    margin-right: 0.5rem; }
+  .form__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.7px; }
 
 .info-group {
-  color: var(--color-button-blue-2); }
+  color: var(--color-button-blue-2);
+  display: flex;
+  align-items: center;
+  margin-left: 6rem;
+  justify-content: space-between;
+  padding: 1.5rem 0rem 1.5rem 0; }
+  .info-group__input {
+    display: flex;
+    gap: 1rem; }
   .info-group__icon {
     width: 2rem;
     height: 2rem;
     fill: currentColor; }
+  .info-group__icon:last-child {
+    color: var(--color-button-blue-1); }
 
 .more_info {
   background-color: var(--color-grey-light-2);
   flex: 0 0 30rem; }
+
+.tweet-btn {
+  padding: 0.5rem 1.6rem;
+  letter-spacing: -1.8px;
+  background-color: var(--color-button-blue-1);
+  font-size: 2rem; }
+
+.show-tweet {
+  font-size: 1.6rem;
+  color: var(--color-button-blue-2);
+  padding: 1.5rem 0 1.5rem 0;
+  border-top: 1px solid var(--color-grey-light-3);
+  border-bottom: 1px solid var(--color-grey-light-3);
+  text-align: center; }
