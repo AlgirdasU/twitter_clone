@@ -24,7 +24,7 @@
     <div class="container">
       <!-- Header start -->
       <header class="header">
-        <div class="logo-container">
+        <div class="logo-box">
           <a href="#" title="Home page"
             ><img src="img/logo.png" alt="twitter clone" class="logo"
           /></a>
@@ -33,7 +33,7 @@
           <ul class="side-nav">
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center side-nav__link--active">
+                <div class="side-nav__box side-nav__link--active">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-home"></use>
                   </svg>
@@ -43,7 +43,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-hash"></use>
                   </svg>
@@ -53,7 +53,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-bell"></use>
                   </svg>
@@ -63,7 +63,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-mail"></use>
                   </svg>
@@ -73,7 +73,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-bookmark"></use>
                   </svg>
@@ -83,7 +83,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-file-text"></use>
                   </svg>
@@ -93,7 +93,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use xLink:href="icons/sprite.svg#icon-user"></use>
                   </svg>
@@ -103,7 +103,7 @@
             </li>
             <li class="side-nav__item">
               <a href="#" class="side-nav__link">
-                <div class="side-nav__center">
+                <div class="side-nav__box">
                   <svg class="side-nav__icon">
                     <use
                       xLink:href="icons/sprite.svg#icon-more-horizontal"
@@ -118,7 +118,7 @@
         </nav>
 
         <div class="account">
-          <div class="account__icon-container">
+          <div class="account__icon-box">
             <svg class="account__icon-user">
               <use xLink:href="icons/sprite.svg#icon-user1"></use>
             </svg>
@@ -139,7 +139,7 @@
       <!-- Header end -->
 
       <!-- Tweet feed start -->
-      <div class="tweet-feed">
+      <div class="tweet">
         <form action="#" class="form">
           <div class="form__home">
             <h2>Home</h2>
@@ -149,7 +149,7 @@
           </div>
 
           <div class="form__group">
-            <div class="form__svg-container">
+            <div class="form__svg-box">
               <svg class="form__icon-user">
                 <use xLink:href="icons/sprite.svg#icon-user1"></use>
               </svg>
@@ -164,7 +164,7 @@
               />
             </div>
           </div>
-          <div class="form__label-container">
+          <div class="form__label-box">
             <svg class="form__icon-globe">
               <use xLink:href="icons/sprite.svg#icon-smile"></use>
             </svg>
@@ -197,8 +197,97 @@
           </div>
         </form>
 
-        <div class="show-tweet">Show 3 Tweet</div>
+        <div class="show-tweet-box">
+          <a href="#" class="show-tweet">Show 3 Tweet</a>
+        </div>
+
+        <div class="feed">
+          <div class="logo-name-content">
+            <div class="feed__logo-box">
+              <svg class="feed__logo">
+                <use xLink:href="icons/sprite.svg#icon-chef"></use>
+              </svg>
+            </div>
+            <div class="row">
+              <div class="author">
+                <div class="author__box">
+                  <span class="author__name">Chef</span>
+                  <span class="author__link">@chef</span>
+                  <span class="author__middot">&middot;</span>
+                  <span class="author__time">12h</span>
+                </div>
+                <div class="author__icon-more-box">
+                  <svg class="author__icon-more">
+                    <use
+                      xLink:href="icons/sprite.svg#icon-more-horizontal"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="author__description">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </div>
+          </div>
+          <div class="person-content">
+            <div class="person-content__img-box">
+              <img
+                src="img/chef-img.jpg"
+                alt="Man with a logo on a t-shirt"
+                class="person-content__img"
+              />
+            </div>
+            <div class="person-content__theme">
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aliquam efficitur venenatis faucibus. Curabitur dapibus nulla
+                pretium, finibus mauris sit amet, gravida lectus.</span
+              >
+            </div>
+          </div>
+
+          <div class="feed-nav">
+            <div class="feed-nav__reply feed-nav--chat-nr">
+              <div class="feed-nav__box feed-nav--chat">
+                <svg class="feed-nav__logo">
+                  <use xLink:href="icons/sprite.svg#icon-message-circle"></use>
+                </svg>
+              </div>
+              <div class="feed-nav__amount">
+                <span>42</span>
+              </div>
+            </div>
+            <div class="feed-nav__reply feed-nav--retweet-nr">
+              <div class="feed-nav__box feed-nav--retweet">
+                <svg class="feed-nav__logo">
+                  <use xLink:href="icons/sprite.svg#icon-repeat"></use>
+                </svg>
+              </div>
+              <div class="feed-nav__amount">
+                <span>71</span>
+              </div>
+            </div>
+            <div class="feed-nav__reply feed-nav--like-nr">
+              <div class="feed-nav__box feed-nav--like">
+                <svg class="feed-nav__logo">
+                  <use xLink:href="icons/sprite.svg#icon-heart"></use>
+                </svg>
+              </div>
+              <div class="feed-nav__amount">
+                <span>37</span>
+              </div>
+            </div>
+            <div class="feed-nav__reply feed-nav__share-nr">
+              <div class="feed-nav__box feed-nav__share">
+                <svg class="feed-nav__logo">
+                  <use xLink:href="icons/sprite.svg#icon-arrow-up"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- Tweet feed end -->
 
       <div class="more_info">more info</div>
