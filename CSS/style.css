@@ -3,13 +3,21 @@
   --color-grey-light-2: #f7f7f7;
   --color-grey-light-3: #e7e7e8;
   --color-grey-light-4: #ccd6dd;
+  --color-grey-light-5: #545f66;
   --color-dark-grey: #536471;
   --color-black-1: #272c30;
   --color-black-2: #0f1419;
   --color-button-blue-0: #e8f5fd;
+  --color-button-blue-01: #dceffa;
   --color-button-blue-1: #8ecdf7;
   --color-button-blue-2: #1d9bf0;
   --color-button-blue-3: #1a8cd8;
+  --color-retweet-01: #def1eb;
+  --color-retweet-02: #c6ebdf;
+  --color-retweet-03: #0ebd83;
+  --color-like-01: #f7e0eb;
+  --color-like-02: #f8cbe0;
+  --color-like-03: #f91880;
   --color-text-light-1: #5c6c78;
   --color-text-dark-1: #140034;
   --font-primary: "Karla", sans-serif; }
@@ -49,7 +57,7 @@ body {
   width: 3rem;
   margin: 1.5rem 3rem 1rem 3rem; }
 
-.logo-container {
+.logo-box {
   position: relative;
   width: 5rem;
   height: 5rem;
@@ -60,7 +68,7 @@ body {
   align-items: center;
   cursor: pointer; }
 
-.logo-container:hover {
+.logo-box:hover {
   background-color: var(--color-button-blue-0); }
 
 .header {
@@ -80,21 +88,18 @@ body {
   .side-nav__item:not(:last-child) {
     margin-bottom: 1rem; }
   .side-nav__link:link {
-    color: var(--color-text-dark-1);
     text-decoration: none;
     display: inline-block;
     padding: 0.8rem 1rem;
     border-radius: 10rem;
     transition: all 0.15s;
     margin-left: 2rem; }
-  .side-nav__link:visited {
-    color: var(--color-text-dark-1);
-    font-weight: 800; }
   .side-nav__link:hover {
     background-color: var(--color-grey-light-3); }
-  .side-nav__center {
+  .side-nav__box {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    color: var(--color-text-dark-1); }
   .side-nav__icon {
     width: 2.4rem;
     height: 2.4rem;
@@ -123,7 +128,7 @@ body {
   cursor: pointer; }
   .account:hover {
     background-color: var(--color-grey-light-3); }
-  .account__icon-container {
+  .account__icon-box {
     position: relative;
     width: 4.5rem;
     height: 4.5rem;
@@ -155,7 +160,7 @@ body {
 .container {
   display: flex; }
 
-.tweet-feed {
+.tweet {
   min-height: 100vh;
   flex: 0 0 60rem;
   border-left: 1px solid var(--color-grey-light-3);
@@ -182,9 +187,8 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 1rem; }
-  .form__svg-container {
+  .form__svg-box {
     background-color: var(--color-grey-light-4);
-    color: var(--color-dark-grey);
     height: 5rem;
     width: 5rem;
     border-radius: 10rem;
@@ -195,14 +199,16 @@ body {
   .form__icon-user {
     width: 4.2rem;
     height: 4.2rem;
-    fill: currentColor; }
+    fill: var(--color-dark-grey); }
   .form__input {
-    display: block;
     font-size: 2.2rem;
     font-family: inherit;
     border: none;
-    outline: none; }
-  .form__label-container {
+    outline: none;
+    color: inherit; }
+  .form__input::placeholder {
+    color: var(--color-text-light-1); }
+  .form__label-box {
     color: var(--color-button-blue-2);
     display: flex;
     align-items: center;
@@ -246,10 +252,111 @@ body {
   background-color: var(--color-button-blue-1);
   font-size: 2rem; }
 
+.show-tweet-box {
+  padding: 0.4rem 0 0 0;
+  border-top: 1px solid var(--color-grey-light-3);
+  border-bottom: 1px solid var(--color-grey-light-3); }
+
 .show-tweet {
+  display: block;
   font-size: 1.6rem;
   color: var(--color-button-blue-2);
-  padding: 1.5rem 0 1.5rem 0;
-  border-top: 1px solid var(--color-grey-light-3);
-  border-bottom: 1px solid var(--color-grey-light-3);
-  text-align: center; }
+  padding: 1.1rem 0 1.5rem 0;
+  text-align: center;
+  text-decoration: none; }
+
+.show-tweet:hover {
+  background-color: var(--color-grey-light-2);
+  transition: all 0.15s; }
+
+.feed {
+  padding: 2rem 2rem 1rem 2rem;
+  letter-spacing: -0.4px;
+  border-bottom: 1px solid var(--color-grey-light-3); }
+  .feed:hover {
+    background-color: var(--color-grey-light-2);
+    transition: all 0.15s; }
+  .feed__logo-box {
+    margin-right: 2rem; }
+  .feed__logo {
+    width: 5rem;
+    height: 5rem; }
+
+.logo-name-content {
+  display: flex; }
+
+.row {
+  width: 100%;
+  font-size: 1.6rem; }
+
+.author {
+  display: flex;
+  height: 2rem; }
+  .author__box {
+    margin-right: auto;
+    gap: 0.3rem; }
+  .author__name {
+    font-weight: 700; }
+  .author__icon-more {
+    width: 2.2rem;
+    height: 2.2rem; }
+
+.person-content {
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-grey-light-3);
+  overflow: hidden;
+  margin-left: 7rem; }
+  .person-content__img {
+    width: 100%; }
+  .person-content__theme {
+    margin: 1rem;
+    font-size: 1.6rem;
+    color: var(--color-dark-grey); }
+
+.feed-nav {
+  display: flex;
+  margin: 1.5rem 2rem 0 7rem;
+  gap: 9rem; }
+  .feed-nav__reply {
+    border-radius: 10rem;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    color: var(--color-text-light-1);
+    cursor: pointer; }
+  .feed-nav__box {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 10rem;
+    transition: all 0.15s; }
+  .feed-nav--chat:hover {
+    background-color: var(--color-button-blue-0); }
+  .feed-nav--chat:active {
+    background-color: var(--color-button-blue-01); }
+  .feed-nav--chat-nr:hover, .feed-nav--chat-nr:active {
+    color: var(--color-button-blue-3); }
+  .feed-nav--retweet:hover {
+    background-color: var(--color-retweet-01); }
+  .feed-nav--retweet:active {
+    background-color: var(--color-retweet-02); }
+  .feed-nav--retweet-nr:hover, .feed-nav--retweet-nr:active {
+    color: var(--color-retweet-03); }
+  .feed-nav--like:hover {
+    background-color: var(--color-like-01); }
+  .feed-nav--like:active {
+    background-color: var(--color-like-02); }
+  .feed-nav--like-nr:hover, .feed-nav--like-nr:active {
+    color: var(--color-like-03); }
+  .feed-nav__share:hover {
+    background-color: var(--color-button-blue-0); }
+  .feed-nav__share:active {
+    background-color: var(--color-button-blue-01); }
+  .feed-nav__share-nr:hover, .feed-nav__share-nr:active {
+    color: var(--color-button-blue-2); }
+  .feed-nav__logo {
+    height: 2rem;
+    width: 2rem;
+    fill: currentColor; }
+  .feed-nav__amount {
+    font-size: 1.6rem; }
