@@ -12,6 +12,7 @@
   --color-button-blue-1: #8ecdf7;
   --color-button-blue-2: #1d9bf0;
   --color-button-blue-3: #1a8cd8;
+  --search-background-grey-1: #eff3f4;
   --color-retweet-01: #def1eb;
   --color-retweet-02: #c6ebdf;
   --color-retweet-03: #0ebd83;
@@ -20,6 +21,9 @@
   --color-like-03: #f91880;
   --color-text-light-1: #5c6c78;
   --color-text-dark-1: #140034;
+  --color-black-1: #0f1419;
+  --color-black-2: #272c30;
+  --color-grey-light-btn-1: #e6e6e7;
   --font-primary: "Karla", sans-serif; }
 
 *,
@@ -39,7 +43,7 @@ body {
   line-height: 1.6; }
 
 .container {
-  max-width: 114rem;
+  max-width: 128rem;
   margin: 0 auto;
   display: flex; }
 
@@ -125,6 +129,7 @@ body {
   align-items: center;
   padding: 0.8rem 1rem;
   border-radius: 10rem;
+  transition: all 0.15s;
   cursor: pointer; }
   .account:hover {
     background-color: var(--color-grey-light-3); }
@@ -144,15 +149,11 @@ body {
     height: 3.5rem;
     fill: currentColor; }
   .account__name-container {
-    margin-right: 4rem;
+    margin-right: auto;
     line-height: 1.2;
-    font-size: 0; }
+    font-size: 1.8rem; }
   .account__name-container div:nth-child(1) {
     font-weight: 700; }
-  .account__name {
-    font-size: 1.8rem; }
-  .account__name-other {
-    font-size: 1.8rem; }
   .account__icon-more {
     width: 2.4rem;
     height: 2.4rem; }
@@ -178,7 +179,9 @@ body {
     color: var(--color-text-dark-1);
     line-height: 1px; }
   .form__home > h2 {
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+    letter-spacing: -0.8px;
+    font-weight: 700; }
   .form__icon {
     width: 2rem;
     height: 2rem;
@@ -241,10 +244,6 @@ body {
     fill: currentColor; }
   .info-group__icon:last-child {
     color: var(--color-button-blue-1); }
-
-.more_info {
-  background-color: var(--color-grey-light-2);
-  flex: 0 0 30rem; }
 
 .tweet-btn {
   padding: 0.5rem 1.6rem;
@@ -319,6 +318,7 @@ body {
   gap: 9rem; }
   .feed-nav__reply {
     border-radius: 10rem;
+    font-size: 1.6rem;
     display: flex;
     gap: 0.4rem;
     align-items: center;
@@ -358,5 +358,152 @@ body {
     height: 2rem;
     width: 2rem;
     fill: currentColor; }
-  .feed-nav__amount {
-    font-size: 1.6rem; }
+
+.more-info {
+  min-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem 0 3rem; }
+
+.search {
+  display: flex; }
+  .search__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: inherit;
+    background-color: var(--search-background-grey-1);
+    border: none;
+    padding: 1rem 5rem;
+    border-radius: 10rem;
+    outline: none;
+    transition: all 0.15s; }
+    .search__input:focus {
+      background-color: #fff;
+      border: 1px solid var(--color-button-blue-2); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+    z-index: 100; }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: -5rem;
+    fill: var(--color-grey-light-5); }
+
+.trend-nav {
+  background-color: var(--color-grey-light-1);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .trend-nav__name-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem; }
+  .trend-nav__title > span {
+    font-size: 2rem;
+    letter-spacing: -0.1px;
+    font-weight: 800; }
+  .trend-nav__link-container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.4;
+    padding: 1rem 2rem;
+    transition: all 0.3s; }
+  .trend-nav__link-container:hover {
+    background-color: var(--color-grey-light-3); }
+  .trend-nav__link-box {
+    display: flex;
+    flex-direction: column; }
+  .trend-nav__link-box span:nth-child(1),
+  .trend-nav__link-box span:nth-child(3) {
+    font-size: 1.4rem;
+    letter-spacing: -0.1px;
+    color: var(--color-grey-light-5); }
+  .trend-nav__link-box span:nth-child(2) {
+    font-size: 1.6rem;
+    font-weight: 700; }
+  .trend-nav__icon {
+    height: 1.8rem;
+    width: 1.8rem; }
+  .trend-nav__link-btn {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--color-button-blue-2);
+    letter-spacing: 0.1px;
+    padding: 1rem 2rem;
+    transition: 0.3s; }
+  .trend-nav__link-btn:hover {
+    background-color: var(--color-grey-light-3); }
+
+.follow-offer {
+  background-color: var(--color-grey-light-2);
+  border-radius: 1.5rem;
+  overflow: hidden; }
+  .follow-offer__title {
+    font-size: 2rem;
+    letter-spacing: -0.1px;
+    font-weight: 800;
+    padding: 1rem 2rem 0 2rem; }
+  .follow-offer__container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: all 0.3s; }
+  .follow-offer__container:hover {
+    background-color: var(--color-grey-light-3); }
+  .follow-offer__icon {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+    display: flex;
+    align-self: center; }
+  .follow-offer__link-btn-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    font-size: 1.6rem;
+    line-height: 1; }
+  .follow-offer__link-btn-box span:nth-child(1) {
+    font-weight: 700; }
+  .follow-offer__name-link {
+    font-size: 1.8rem;
+    line-height: 1; }
+  .follow-offer__btn {
+    border: none;
+    background-color: var(--color-black-1);
+    color: var(--color-grey-light-btn-1);
+    border-radius: 10rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 700; }
+  .follow-offer__link-more {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--color-button-blue-2);
+    letter-spacing: 0.1px;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: 0.3s; }
+  .follow-offer__link-more:hover {
+    background-color: var(--color-grey-light-3); }
+
+.footer__nav-box {
+  display: flex;
+  font-size: 1.4rem;
+  flex-wrap: wrap;
+  gap: 1rem; }
+
+.footer__link-box {
+  display: flex; }
+
+.footer__link {
+  text-decoration: none; }
+
+.footer__link-icon {
+  height: 1.6rem;
+  width: 1.6rem; }
