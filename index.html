@@ -124,9 +124,9 @@
             </svg>
           </div>
           <div class="account__name-container">
-            <div><span class="account__name">Algirdas</span></div>
-            <div>
-              <span class="account__name-other">@Algirdas</span>
+            <div><span class="account__name-box">Algirdas</span></div>
+            <div class="account__name-link">
+              <span>@Algirdas</span>
             </div>
           </div>
           <div class="account__more-container">
@@ -290,7 +290,158 @@
 
       <!-- Tweet feed end -->
 
-      <div class="more_info">more info</div>
+      <div class="more-info">
+        <form action="#" class="search">
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xLink:href="icons/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search Twitter"
+          />
+        </form>
+
+        <nav class="trend-nav">
+          <div class="trend-nav__name-box">
+            <div class="trend-nav__title">
+              <span>Trends for you</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-settings1"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="trend-nav__link-container">
+            <div class="trend-nav__link-box">
+              <span>Technology &middot; Trending</span>
+              <span>JSON</span>
+              <span>2,535 Tweets</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="trend-nav__link-container">
+            <div class="trend-nav__link-box">
+              <span>Music &middot; Trending</span>
+              <span>#Korn</span>
+              <span>11K Tweets</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="trend-nav__link-container">
+            <div class="trend-nav__link-box">
+              <span>Technology &middot; Trending</span>
+              <span>#NFTs</span>
+              <span>570K Tweets</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="trend-nav__link-container">
+            <div class="trend-nav__link-box">
+              <span>Politics &middot; Lithunia</span>
+              <span>Lithunia</span>
+              <span>4015 Tweets</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="trend-nav__link-container">
+            <div class="trend-nav__link-box">
+              <span>Technology &middot; Trending</span>
+              <span>#crypto</span>
+              <span>511K Tweets</span>
+            </div>
+            <div class="trend-nav__icon-box">
+              <svg class="trend-nav__icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+            </div>
+          </div>
+          <a href="#" class="trend-nav__link-btn">Show more</a>
+        </nav>
+
+        <div class="follow-offer">
+          <div class="follow-offer__title">
+            <span>Who to follow</span>
+          </div>
+
+          <div class="follow-offer__container">
+            <div class="follow-offer__icon-box">
+              <svg class="follow-offer__icon">
+                <use xLink:href="icons/sprite.svg#icon-at-and-t"></use>
+              </svg>
+            </div>
+            <div class="follow-offer__link-btn-box">
+              <span>John</span>
+
+              <span>@John</span>
+            </div>
+            <button class="follow-offer__btn">Follow</button>
+          </div>
+
+          <div class="follow-offer__container">
+            <div class="follow-offer__icon-box">
+              <svg class="follow-offer__icon">
+                <use xLink:href="icons/sprite.svg#icon-crunchyroll"></use>
+              </svg>
+            </div>
+            <div class="follow-offer__link-btn-box">
+              <span>mark</span>
+              <span>@mark</span>
+            </div>
+            <div><button class="follow-offer__btn">Follow</button></div>
+          </div>
+          <a href="#" class="follow-offer__link-more">Show more</a>
+        </div>
+
+        <footer class="footer">
+          <nav class="footer__nav-container">
+            <div class="footer__nav-box">
+              <a class="footer__link" href="#">Terms of Service</a>
+              <a class="footer__link" href="#">Privacy Policy</a>
+              <a class="footer__link" href="#">Cookie Policy</a>
+              <a class="footer__link" href="#">Accessibility</a>
+              <a class="footer__link" href="#">Ads info</a>
+              <div class="footer__link-box">
+                <div class="footer__link-more-box">
+                  <a class="footer__link" href="#">More</a>
+                </div>
+                <div class="footer__link-icon-box">
+                  <svg class="footer__link-icon">
+                    <use
+                      xLink:href="icons/sprite.svg#icon-more-horizontal"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="copyright-box">
+              <p class="copyright">
+                &copy; <span class="year">2022</span> Twitter, Inc
+              </p>
+            </div>
+          </nav>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
