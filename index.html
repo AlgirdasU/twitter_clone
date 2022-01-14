@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <script defer src="js/script.js"></script>
     <title>Home &zwnj; &frasl; &zwnj; Twitter</title>
   </head>
 
@@ -201,6 +203,8 @@
           <a href="#" class="show-tweet">Show 3 Tweet</a>
         </div>
 
+        <div class="test"></div>
+
         <div class="feed">
           <div class="logo-name-content">
             <div class="feed__logo-box">
@@ -217,7 +221,7 @@
                   <span class="author__time">12h</span>
                 </div>
                 <div class="author__icon-more-box">
-                  <svg class="author__icon-more">
+                  <svg class="author__icon-more-logo">
                     <use
                       xLink:href="icons/sprite.svg#icon-more-horizontal"
                     ></use>
@@ -277,8 +281,8 @@
                 <span>37</span>
               </div>
             </div>
-            <div class="feed-nav__reply feed-nav__share-nr">
-              <div class="feed-nav__box feed-nav__share">
+            <div class="feed-nav__reply feed-nav--share-nr">
+              <div class="feed-nav__box feed-nav--share">
                 <svg class="feed-nav__logo">
                   <use xLink:href="icons/sprite.svg#icon-arrow-up"></use>
                 </svg>
@@ -384,61 +388,68 @@
             <span>Who to follow</span>
           </div>
 
-          <div class="follow-offer__container">
+          <div class="follow-offer__container-follow">
             <div class="follow-offer__icon-box">
               <svg class="follow-offer__icon">
                 <use xLink:href="icons/sprite.svg#icon-at-and-t"></use>
               </svg>
             </div>
-            <div class="follow-offer__link-btn-box">
-              <span>John</span>
-
-              <span>@John</span>
+            <div class="follow-offer__link-box">
+              <a href="#" class="follow-offer__link"><span>John</span></a>
+              <a href="#" class="follow-offer__link"><span>@John</span></a>
             </div>
-            <button class="follow-offer__btn">Follow</button>
+            <button class="follow-offer__btn-follow">Follow</button>
           </div>
 
-          <div class="follow-offer__container">
+          <div class="follow-offer__container-follow">
             <div class="follow-offer__icon-box">
               <svg class="follow-offer__icon">
                 <use xLink:href="icons/sprite.svg#icon-crunchyroll"></use>
               </svg>
             </div>
-            <div class="follow-offer__link-btn-box">
-              <span>mark</span>
-              <span>@mark</span>
+            <div class="follow-offer__link-box">
+              <a href="#" class="follow-offer__link"><span>mark</span></a>
+              <a href="#" class="follow-offer__link"><span>@mark</span></a>
             </div>
-            <div><button class="follow-offer__btn">Follow</button></div>
+            <button class="follow-offer__btn-follow">Follow</button>
           </div>
           <a href="#" class="follow-offer__link-more">Show more</a>
         </div>
 
         <footer class="footer">
           <nav class="footer__nav-container">
-            <div class="footer__nav-box">
+            <!-- <div class="footer__nav-box"> -->
+            <div class="footer__link-box">
               <a class="footer__link" href="#">Terms of Service</a>
+            </div>
+            <div class="footer__link-box">
               <a class="footer__link" href="#">Privacy Policy</a>
+            </div>
+            <div class="footer__link-box">
               <a class="footer__link" href="#">Cookie Policy</a>
+            </div>
+            <div class="footer__link-box">
               <a class="footer__link" href="#">Accessibility</a>
+            </div>
+            <div class="footer__link-box">
               <a class="footer__link" href="#">Ads info</a>
-              <div class="footer__link-box">
-                <div class="footer__link-more-box">
-                  <a class="footer__link" href="#">More</a>
-                </div>
-                <div class="footer__link-icon-box">
-                  <svg class="footer__link-icon">
-                    <use
-                      xLink:href="icons/sprite.svg#icon-more-horizontal"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
+            </div>
+            <div class="footer__link-box">
+              <!-- <div class="footer__link-more-box"> -->
+              <a class="footer__link" href="#">More</a>
+              <!-- </div> -->
+              <!-- <div class="footer__link-icon-box"> -->
+              <svg class="footer__link-icon">
+                <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+              </svg>
+              <!-- </div> -->
             </div>
             <div class="copyright-box">
               <p class="copyright">
                 &copy; <span class="year">2022</span> Twitter, Inc
               </p>
             </div>
+            <!-- </div> -->
           </nav>
         </footer>
       </div>
