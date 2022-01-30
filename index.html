@@ -125,6 +125,7 @@
               <use xLink:href="icons/sprite.svg#icon-user1"></use>
             </svg>
           </div>
+
           <div class="account__name-container">
             <div><span class="account__name-box">Algirdas</span></div>
             <div class="account__name-link">
@@ -206,30 +207,42 @@
         <div class="test"></div>
 
         <div class="feed">
-          <div class="logo-name-content">
-            <div class="feed__logo-box">
-              <svg class="feed__logo">
-                <use xLink:href="icons/sprite.svg#icon-chef"></use>
-              </svg>
-            </div>
-            <div class="row">
-              <div class="author">
-                <div class="author__box">
-                  <span class="author__name">Chef</span>
-                  <span class="author__link">@chef</span>
-                  <span class="author__middot">&middot;</span>
-                  <span class="author__time">12h</span>
-                </div>
-                <div class="author__icon-more-box">
-                  <svg class="author__icon-more-logo">
-                    <use
-                      xLink:href="icons/sprite.svg#icon-more-horizontal"
-                    ></use>
-                  </svg>
-                </div>
+          <div class="author">
+            <div class="author__container">
+              <div class="author__logo-box">
+                <svg class="author__logo">
+                  <use xLink:href="icons/sprite.svg#icon-chef"></use>
+                </svg>
               </div>
-              <div class="author__description">
-                <span>Lorem ipsum dolor sit amet.</span>
+              <div class="author__name">
+                <div class="author__name-container">
+                  <div class="author__box">
+                    <a href="#" class="author__portfolio"><span>Chef</span></a>
+                    <a href="#" class="author__at-portfolio">
+                      <span>@chef</span></a
+                    >
+                  </div>
+                  <div class="author__middot-box">
+                    <a href="#" class="author__middot"><span>&middot;</span></a>
+
+                    <a href="#" class="author__time-after-tweet"
+                      ><span>12h</span></a
+                    >
+                  </div>
+                </div>
+                <!-- <div class="author__tweet-description-container"> -->
+                <div class="author__tweet-description-box">
+                  <a href="#" class="author__tweet-description"
+                    ><span>Lorem ipsum dolor sit amet.</span></a
+                  >
+                </div>
+                <!-- </div> -->
+              </div>
+
+              <div class="author__icon-more-box">
+                <svg class="author__icon-more-logo">
+                  <use xLink:href="icons/sprite.svg#icon-more-horizontal"></use>
+                </svg>
               </div>
             </div>
           </div>
@@ -313,7 +326,7 @@
             <div class="trend-nav__title">
               <span>Trends for you</span>
             </div>
-            <div class="trend-nav__icon-box">
+            <div class="trend-nav__icon-box trend-nav--settings-icon">
               <svg class="trend-nav__icon">
                 <use xLink:href="icons/sprite.svg#icon-settings1"></use>
               </svg>
