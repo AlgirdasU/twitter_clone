@@ -1,6 +1,7 @@
 :root {
   --color-grey-light-1: #f7f9f9;
   --color-grey-light-2: #f7f7f7;
+  --color-grey-light-2-1: #eff1f1;
   --color-grey-light-3: #e7e7e8;
   --color-grey-light-4: #ccd6dd;
   --color-grey-light-5: #545f66;
@@ -80,7 +81,8 @@ body {
 .header {
   flex: 0 0 27rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100vh; }
 
 .sidebar {
   margin-bottom: auto;
@@ -101,8 +103,7 @@ body {
     transition: all 0.15s;
     margin-left: 2rem; }
   .side-nav__link:visited {
-    font-weight: 800;
-    color: red; }
+    font-weight: 800; }
   .side-nav__link:hover {
     background-color: var(--color-grey-light-3); }
   .side-nav__box {
@@ -139,19 +140,21 @@ body {
   .account:hover {
     background-color: var(--color-grey-light-3); }
   .account__icon-box {
+    overflow: hidden;
     position: relative;
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 10rem;
     margin-right: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: end;
     background-color: var(--color-grey-light-4);
     color: var(--color-dark-grey); }
   .account__icon-user {
-    width: 3.5rem;
-    height: 3.5rem;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
     fill: currentColor; }
   .account__name-container {
     margin-right: auto;
@@ -200,13 +203,16 @@ body {
     height: 5rem;
     width: 5rem;
     border-radius: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    position: relative;
+    overflow: hidden;
     margin-right: 1rem; }
   .form__icon-user {
-    width: 4.2rem;
-    height: 4.2rem;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.5rem;
+    height: 4.5rem;
     fill: var(--color-dark-grey); }
   .form__input {
     font-size: 2.2rem;
@@ -280,49 +286,81 @@ body {
   .feed:hover {
     background-color: var(--color-grey-light-2);
     transition: all 0.15s; }
-  .feed__logo-box {
-    margin-right: 2rem; }
-  .feed__logo {
-    width: 5rem;
-    height: 5rem; }
 
-.logo-name-content {
+.author__container {
   display: flex; }
 
-.row {
-  width: 100%;
-  font-size: 1.6rem; }
+.author__logo-box {
+  margin-right: 2rem; }
 
-.author {
+.author__logo {
+  width: 5rem;
+  height: 5rem; }
+
+.author__name {
   display: flex;
-  height: 2rem; }
-  .author__box {
-    margin-right: auto;
-    gap: 0.3rem; }
-  .author__name {
-    font-weight: 700; }
-  .author__link, .author__middot, .author__time {
-    color: var(--color-text-light-1); }
-  .author__icon-more-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10rem;
-    color: var(--color-text-light-1);
-    cursor: pointer;
-    transition: all 0.15s; }
-  .author__icon-more-box:hover {
-    background-color: var(--color-button-blue-0);
-    color: var(--color-button-blue-2); }
-  .author__icon-more-box:active {
-    background-color: var(--color-button-blue-01);
-    color: var(--color-button-blue-2); }
-  .author__icon-more-logo {
-    width: 2.2rem;
-    height: 2.2rem;
-    fill: currentColor; }
+  flex-direction: column;
+  font-size: 1.6rem;
+  width: 100%;
+  line-height: -10rem; }
+
+.author__name-container {
+  display: flex;
+  align-items: center; }
+
+.author__box {
+  margin-right: 0.3rem; }
+
+.author__box a {
+  text-decoration: none; }
+
+.author__portfolio {
+  font-weight: 700;
+  color: var(--color-text-dark-1); }
+
+.author__portfolio:hover {
+  text-decoration: underline; }
+
+.author__at-portfolio {
+  color: var(--color-text-light-1); }
+
+.author__middot-box {
+  margin-right: auto; }
+
+.author__middot {
+  text-decoration: none; }
+
+.author__time-after-tweet {
+  text-decoration: none;
+  color: var(--color-text-light-1); }
+
+.author__tweet-description {
+  text-decoration: none;
+  color: var(--color-text-dark-1); }
+
+.author__icon-more-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 5rem;
+  border-radius: 10rem;
+  color: var(--color-text-light-1);
+  cursor: pointer;
+  transition: all 0.15s; }
+
+.author__icon-more-box:hover {
+  background-color: var(--color-button-blue-0);
+  color: var(--color-button-blue-2); }
+
+.author__icon-more-box:active {
+  background-color: var(--color-button-blue-01);
+  color: var(--color-button-blue-2); }
+
+.author__icon-more-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: currentColor; }
 
 .person-content {
   border-radius: 1.5rem;
@@ -451,9 +489,29 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--color-text-dark-1); }
+  .trend-nav__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10rem;
+    color: var(--color-text-light-1);
+    cursor: pointer;
+    transition: all 0.15s; }
+  .trend-nav__icon-box:hover {
+    background-color: var(--color-button-blue-0);
+    color: var(--color-button-blue-2); }
+  .trend-nav__icon-box:active {
+    background-color: var(--color-button-blue-01);
+    color: var(--color-button-blue-2); }
+  .trend-nav--settings-icon:hover {
+    background-color: var(--color-grey-light-3);
+    color: var(--color-text-light-1); }
   .trend-nav__icon {
     height: 1.8rem;
-    width: 1.8rem; }
+    width: 1.8rem;
+    fill: currentColor; }
   .trend-nav__link-btn {
     text-decoration: none;
     font-size: 1.6rem;
